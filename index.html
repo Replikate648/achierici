@@ -36,10 +36,8 @@
         (function() {
             const hasBeenRedirected = sessionStorage.getItem('redirected');
             if (hasBeenRedirected) return;
-
-            const userLang = navigator.language || navigator.userLanguage; 
+            const userLang = navigator.language || navigator.userLanguage;
             const primaryLang = userLang.slice(0, 2);
-
             if (primaryLang !== 'it') {
                 sessionStorage.setItem('redirected', 'true');
                 window.location.replace('en.html');
@@ -61,6 +59,7 @@
                 <a href="#about" class="hover:text-indigo-700 transition-all">Chi Sono</a>
                 <a href="#method" class="hover:text-indigo-700 transition-all">Come Lavoro</a>
                 <a href="#projects" class="hover:text-indigo-700 transition-all">Progetti</a>
+                <a href="#demo" class="hover:text-indigo-700 transition-all">Demo</a>
                 <a href="#contact" class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition-all">Contatti</a>
                 <!-- Switcher Lingua -->
                 <div class="border-l pl-4 ml-4 text-sm">
@@ -196,8 +195,24 @@
         </div>
     </section>
 
+    <!-- Video Demo Section -->
+    <section id="demo" class="py-20 bg-white">
+        <div class="container mx-auto px-4" data-aos="fade-up">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-800">Demo: Sistema RAG in Azione</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Guarda una demo che mostra il funzionamento di un agente AI per l'analisi e lo scoring di dati non strutturati.</p>
+            </div>
+            <!-- Responsive Video Container -->
+            <div class="max-w-4xl mx-auto">
+                <div class="relative shadow-xl rounded-lg overflow-hidden" style="padding-top: 56.25%;">
+                    <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/TU_2ULqi_o0?si=QDavMcTe3hEXeb9i" title="Video demo del progetto RAG" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-white">
+    <section id="contact" class="py-20 bg-gray-50">
         <div class="container mx-auto px-4" data-aos="fade-up">
             <div class="max-w-4xl mx-auto bg-gray-50 rounded-xl shadow-md overflow-hidden">
                 <div class="md:flex">
@@ -291,4 +306,3 @@
     </script>
 </body>
 </html>
-
