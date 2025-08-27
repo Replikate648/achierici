@@ -7,11 +7,6 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <meta name="google-site-verification" content="GUhoNCRgTsy4XKgQsYqoRe11SinDsMcsD-rjuEH2084" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Istruzioni SEO per Multilingua -->
-    <link rel="canonical" href="https://replikate648.github.io/achierici/" />
-    <link rel="alternate" hreflang="it" href="https://replikate648.github.io/achierici/" />
-    <link rel="alternate" hreflang="en" href="https://replikate648.github.io/achierici/en.html" />
-    <link rel="alternate" hreflang="x-default" href="https://replikate648.github.io/achierici/" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -66,7 +61,6 @@
                 <a href="#projects" class="hover:text-indigo-700 transition-all">Progetti</a>
                 <a href="#demo" class="hover:text-indigo-700 transition-all">Demo</a>
                 <a href="#contact" class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition-all">Contatti</a>
-                <!-- Switcher Lingua -->
                 <div class="border-l pl-4 ml-4 text-sm">
                     <span class="font-bold text-gray-800">IT</span>
                     <a href="en.html" class="text-gray-500 hover:text-indigo-700">EN</a>
@@ -77,7 +71,6 @@
             </button>
         </div>
     </header>
-
     <!-- Hero Section -->
     <section id="home" class="gradient-bg text-white py-20">
         <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
@@ -94,7 +87,6 @@
             </div>
         </div>
     </section>
-
     <!-- Services Section -->
     <section id="services" class="py-20 bg-white">
         <div class="container mx-auto px-4" data-aos="fade-up">
@@ -126,7 +118,6 @@
             </div>
         </div>
     </section>
-
     <!-- About Section -->
     <section id="about" class="py-20 bg-gray-50">
         <div class="container mx-auto px-4" data-aos="fade-up">
@@ -143,7 +134,6 @@
             </div>
         </div>
     </section>
-
     <!-- Work Method Section -->
     <section id="method" class="py-20 bg-white">
         <div class="container mx-auto px-4" data-aos="fade-up">
@@ -163,7 +153,6 @@
             </div>
         </div>
     </section>
-
     <!-- Projects Section -->
     <section id="projects" class="py-20 bg-gray-50">
         <div class="container mx-auto px-4" data-aos="fade-up">
@@ -172,34 +161,56 @@
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">Soluzioni concrete che dimostrano un approccio innovativo e un impatto misurabile.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Progetto Automazione -->
                 <div class="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg p-8" data-aos="fade-up" data-aos-delay="100">
-                    <div class="flex items-center mb-4"><div class="bg-blue-100 p-3 rounded-full mr-4"><i class="fas fa-robot text-blue-600 text-xl"></i></div><h3 class="text-2xl font-bold text-gray-800">Automazione Reportistica</h3></div>
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-robot text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800">Automazione Reportistica</h3>
+                    </div>
                     <p class="text-gray-600 mb-4">Sviluppo di un sistema in Microsoft 365 per automatizzare la generazione di report aziendali, riducendo il lavoro manuale.</p>
-                    <h4 class="font-semibold text-gray-800 mb-2">Tecnologie:</h4>
-                    <div class="flex flex-wrap gap-2"><span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">PowerApps</span><span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Power Automate</span><span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Azure</span></div>
+                    <div class="mt-4 flex space-x-2">
+                        <img src="report_quindicinale.png" alt="Anteprima Report Quindicinale" class="w-1/2 rounded border cursor-pointer hover:opacity-75 project-image" data-src="report_quindicinale.png">
+                        <img src="analisi_email.png" alt="Anteprima Analisi Email" class="w-1/2 rounded border cursor-pointer hover:opacity-75 project-image" data-src="analisi_email.png">
+                    </div>
                 </div>
+                <!-- Progetto Luminatens -->
                 <div class="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg p-8" data-aos="fade-up" data-aos-delay="200">
-                    <div class="flex items-center mb-4"><div class="bg-purple-100 p-3 rounded-full mr-4"><i class="fas fa-lightbulb text-purple-600 text-xl"></i></div><h3 class="text-2xl font-bold text-gray-800">Luminatens - App & Web</h3></div>
+                    <div class="flex items-center mb-4">
+                        <div class="bg-purple-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-lightbulb text-purple-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800">Luminatens - App & Web</h3>
+                    </div>
                     <p class="text-gray-600 mb-4">Sviluppo completo di un'app cross-platform per la scansione delle etichette nutrizionali, con relativo sito web.</p>
-                    <h4 class="font-semibold text-gray-800 mb-2">Tecnologie:</h4>
-                    <div class="flex flex-wrap gap-2"><span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">React Native</span><span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Next.js</span><span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Firebase</span><span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Google Cloud</span></div>
                 </div>
+                <!-- Progetto E-commerce -->
                 <div class="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg p-8" data-aos="fade-up" data-aos-delay="300">
-                    <div class="flex items-center mb-4"><div class="bg-green-100 p-3 rounded-full mr-4"><i class="fas fa-store text-green-600 text-xl"></i></div><h3 class="text-2xl font-bold text-gray-800">E-commerce</h3></div>
+                    <div class="flex items-center mb-4">
+                        <div class="bg-green-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-store text-green-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800">E-commerce</h3>
+                    </div>
                     <p class="text-gray-600 mb-4">E-commerce di intimo e abbigliamento sviluppato da zero. Include blog e integrazione API GLS per la logistica.</p>
-                    <h4 class="font-semibold text-gray-800 mb-2">Tecnologie:</h4>
-                    <div class="flex flex-wrap gap-2"><span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Next.js</span><span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Supabase</span><span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Stripe API</span><span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">GLS API</span><span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">React</span><span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Tailwind CSS</span><span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">shadncn/ui</span></div>
                 </div>
+                <!-- Progetto Landing Page -->
                 <div class="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg p-8" data-aos="fade-up" data-aos-delay="400">
-                    <div class="flex items-center mb-4"><div class="bg-pink-100 p-3 rounded-full mr-4"><i class="fas fa-bullseye text-pink-600 text-xl"></i></div><h3 class="text-2xl font-bold text-gray-800">Landing Page Strategica</h3></div>
+                    <div class="flex items-center mb-4">
+                        <div class="bg-pink-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-bullseye text-pink-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800">Landing Page Strategica</h3>
+                    </div>
                     <p class="text-gray-600 mb-4">Realizzazione di una landing page per un servizio di "AI Strategy Assessment" per l'acquisizione di lead qualificati (PMI).</p>
-                    <h4 class="font-semibold text-gray-800 mb-2">Tecnologie:</h4>
-                    <div class="flex flex-wrap gap-2"><span class="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm">React</span><span class="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm">Vite</span><span class="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm">Tailwind CSS</span><span class="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm">Shadcn/ui</span><span class="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm">Supabase</span></div>
+                    <div class="mt-4">
+                        <img src="landing_page.png" alt="Anteprima Landing Page" class="w-full rounded border cursor-pointer hover:opacity-75 project-image" data-src="landing_page.png">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Video Demo Section 1: RAG -->
     <section id="demo" class="py-20 bg-white">
         <div class="container mx-auto px-4" data-aos="fade-up">
@@ -214,12 +225,11 @@
             </div>
         </div>
     </section>
-
     <!-- Video Demo Section 2: N8N -->
     <section id="demo-n8n" class="py-20 bg-gray-50">
         <div class="container mx-auto px-4" data-aos="fade-up">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-800">Demo: Agente N8N per la Market Intelligence</h2>
+                < <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-800">Demo: Agente N8N per la Market Intelligence</h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">Un workflow di automazione che monitora i blog dei competitor, estrae nuovi articoli e li archivia per l'analisi strategica dei contenuti.</p>
             </div>
             <div class="max-w-6xl mx-auto md:flex md:items-start md:space-x-12">
@@ -266,7 +276,6 @@
             </div>
         </div>
     </section>
-
     <!-- Contact Section -->
     <section id="contact" class="py-20 bg-white">
         <div class="container mx-auto px-4" data-aos="fade-up">
@@ -289,7 +298,6 @@
             </div>
         </div>
     </section>
-
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-8">
         <div class="container mx-auto px-4 text-center">
@@ -297,7 +305,6 @@
             <a href="#" id="open-privacy-policy-footer" class="text-sm text-gray-400 hover:text-white mt-2 inline-block">Privacy Policy</a>
         </div>
     </footer>
-
     <!-- Privacy Policy Modal -->
     <div id="privacy-modal" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50 opacity-0 pointer-events-none">
         <div class="modal-container bg-white w-full max-w-2xl rounded-lg shadow-xl max-h-full overflow-y-auto p-8 transform scale-95">
@@ -321,7 +328,13 @@
             </div>
         </div>
     </div>
-
+    <!-- Image Modal -->
+    <div id="image-modal" class="modal-overlay fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 z-50 hidden">
+        <div class="modal-container relative max-w-4xl max-h-full">
+            <img id="modal-img" src="" alt="Vista ingrandita del progetto" class="block max-w-full max-h-[90vh]">
+            <button id="modal-close" class="absolute -top-2 -right-2 m-4 text-white text-4xl font-bold">&times;</button>
+        </div>
+    </div>
     <!-- AOS Animation Library JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
@@ -329,20 +342,25 @@
             duration: 800,
             once: true,
         });
+
+        // Script per il modale privacy
         const modal = document.getElementById('privacy-modal');
         const openLinks = [
             document.getElementById('open-privacy-policy'),
             document.getElementById('open-privacy-policy-footer')
         ];
         const closeButton = document.getElementById('close-privacy-policy');
+
         const openModal = () => {
             modal.classList.remove('opacity-0', 'pointer-events-none');
             modal.querySelector('.modal-container').classList.remove('scale-95');
         };
+
         const closeModal = () => {
             modal.classList.add('opacity-0', 'pointer-events-none');
             modal.querySelector('.modal-container').classList.add('scale-95');
         };
+
         openLinks.forEach(link => {
             if(link) {
                 link.addEventListener('click', (e) => {
@@ -351,16 +369,47 @@
                 });
             }
         });
+
         if(closeButton) {
             closeButton.addEventListener('click', closeModal);
         }
+
         modal.addEventListener('click', (e) => {
             if (e.target === modal) {
                 closeModal();
             }
         });
+
+        // Script per il modale delle immagini
+        const imageModal = document.getElementById('image-modal');
+        const modalImg = document.getElementById('modal-img');
+        const modalClose = document.getElementById('modal-close');
+        const projectImages = document.querySelectorAll('.project-image');
+
+        const openImageModal = (src) => {
+            modalImg.src = src;
+            imageModal.classList.remove('hidden');
+        };
+
+        const closeImageModal = () => {
+            imageModal.classList.add('hidden');
+        };
+
+        projectImages.forEach(img => {
+            img.addEventListener('click', () => {
+                openImageModal(img.dataset.src);
+            });
+        });
+
+        if (modalClose) {
+            modalClose.addEventListener('click', closeImageModal);
+        }
+
+        imageModal.addEventListener('click', (e) => {
+            if (e.target === imageModal) {
+                closeImageModal();
+            }
+        });
     </script>
 </body>
 </html>
-
-
