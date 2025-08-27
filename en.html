@@ -177,6 +177,9 @@
                         <h3 class="text-2xl font-bold text-gray-800">Luminatens - App & Web</h3>
                     </div>
                     <p class="text-gray-600 mb-4">Full development of a cross-platform app for scanning nutritional labels, with its companion website.</p>
+                    <div class="mt-4">
+                        <img src="luminatens_preview.png" alt="Luminatens app preview" class="w-full rounded border cursor-pointer hover:opacity-75 project-image" data-src="luminatens_preview.png">
+                    </div>
                 </div>
                 <!-- E-commerce Project -->
                 <div class="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg p-8" data-aos="fade-up" data-aos-delay="300">
@@ -187,6 +190,9 @@
                         <h3 class="text-2xl font-bold text-gray-800">E-commerce</h3>
                     </div>
                     <p class="text-gray-600 mb-4">Lingerie and apparel e-commerce built from scratch. Includes a blog and GLS logistics API integration.</p>
+                    <div class="mt-4">
+                        <img src="ilbarattolo_preview.png" alt="Il Barattolo e-commerce preview" class="w-full rounded border cursor-pointer hover:opacity-75 project-image" data-src="ilbarattolo_preview.png">
+                    </div>
                 </div>
                 <!-- Strategic Landing Page Project -->
                 <div class="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg p-8" data-aos="fade-up" data-aos-delay="400">
@@ -314,95 +320,4 @@
                 <p>The data provided is used exclusively to respond to the contact request sent by the user and for any subsequent communications strictly related to that request.</p>
                 <h3 class="font-bold text-lg mt-4">Legal Basis for Processing</h3>
                 <p>The processing is based on the user's explicit consent, provided via the specific checkbox before submitting the form. Providing the data is optional but necessary to send the request.</p>
-                <h3 class="font-bold text-lg mt-4">Retention Period</h3>
-                <p>Data will be stored for the time strictly necessary to manage the user's request and to comply with legal obligations. It will not be used for other purposes or shared with third parties without explicit consent.</p>
-                <h3 class="font-bold text-lg mt-4">User Rights</h3>
-                <p>According to Regulation (EU) 2016/679, the user has the right to access their data, request its correction, erasure (right to be forgotten), restriction of processing, object to processing, and the right to data portability. To exercise these rights, you can write to the Data Controller's email address.</p>
-            </div>
-        </div>
-    </div>
-    <!-- Image Modal -->
-    <div id="image-modal" class="modal-overlay fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 z-50 hidden">
-        <div class="modal-container relative max-w-4xl max-h-full">
-            <img id="modal-img" src="" alt="Enlarged project view" class="block max-w-full max-h-[90vh]">
-            <button id="modal-close" class="absolute -top-2 -right-2 m-4 text-white text-4xl font-bold">&times;</button>
-        </div>
-    </div>
-    <!-- AOS Animation Library JS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 800,
-            once: true,
-        });
-
-        // Script per il modale privacy
-        const modal = document.getElementById('privacy-modal');
-        const openLinks = [
-            document.getElementById('open-privacy-policy'),
-            document.getElementById('open-privacy-policy-footer')
-        ];
-        const closeButton = document.getElementById('close-privacy-policy');
-
-        const openModal = () => {
-            modal.classList.remove('opacity-0', 'pointer-events-none');
-            modal.querySelector('.modal-container').classList.remove('scale-95');
-        };
-
-        const closeModal = () => {
-            modal.classList.add('opacity-0', 'pointer-events-none');
-            modal.querySelector('.modal-container').classList.add('scale-95');
-        };
-
-        openLinks.forEach(link => {
-            if(link) {
-                link.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    openModal();
-                });
-            }
-        });
-
-        if(closeButton) {
-            closeButton.addEventListener('click', closeModal);
-        }
-
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                closeModal();
-            }
-        });
-
-        // Script per il modale delle immagini
-        const imageModal = document.getElementById('image-modal');
-        const modalImg = document.getElementById('modal-img');
-        const modalClose = document.getElementById('modal-close');
-        const projectImages = document.querySelectorAll('.project-image');
-
-        const openImageModal = (src) => {
-            modalImg.src = src;
-            imageModal.classList.remove('hidden');
-        };
-
-        const closeImageModal = () => {
-            imageModal.classList.add('hidden');
-        };
-
-        projectImages.forEach(img => {
-            img.addEventListener('click', () => {
-                openImageModal(img.dataset.src);
-            });
-        });
-
-        if (modalClose) {
-            modalClose.addEventListener('click', closeImageModal);
-        }
-
-        imageModal.addEventListener('click', (e) => {
-            if (e.target === imageModal) {
-                closeImageModal();
-            }
-        });
-    </script>
-</body>
-</html>
+     
