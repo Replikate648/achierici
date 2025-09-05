@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scout Immobiliare - Il Tuo Vantaggio Competitivo Automatizzato</title>
+    <meta name="description" content="Monitora gli annunci immobiliari prima della concorrenza. Ricevi alert in tempo reale e scopri le migliori occasioni sul mercato prima di tutti.">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        .font-montserrat { font-family: 'Montserrat', sans-serif; }
+        .gradient-bg {
+            background: linear-gradient(135deg, #6B46C1 0%, #3182CE 100%);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="font-montserrat antialiased text-gray-800 bg-gray-50">
+
+    <!-- Header Semplificato -->
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold">
+                <span class="text-gray-800">Scout</span>
+                <span class="text-indigo-600">Immobiliare</span>
+            </h1>
+            <a href="#pricing" class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition-all">
+                Piani e Prezzi
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg text-white py-20">
+        <div class="container mx-auto px-4 text-center" data-aos="fade-up">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">Batti la Concorrenza sul Tempo.</h2>
+            <p class="text-xl max-w-3xl mx-auto mb-8 opacity-90">Scout Immobiliare è l'agente software che monitora i portali per te, 24/7, e ti notifica le migliori occasioni non appena vengono pubblicate. Smetti di aggiornare le pagine, inizia a chiamare i clienti per primo.</p>
+            <a href="#pricing" class="bg-white text-indigo-700 font-bold px-8 py-4 rounded-md text-lg hover:bg-gray-100 transition-all">
+                Scopri i Piani e Inizia la Prova
+            </a>
+        </div>
+    </section>
+
+    <!-- Sezione Vantaggi (Come Funziona) -->
+    <section id="features" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-20 h-20 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-bolt text-indigo-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Velocità</h3>
+                    <p class="text-gray-600">Sii il primo a contattare un venditore privato. Ricevi un alert istantaneo su Telegram non appena un annuncio in linea con i tuoi criteri viene pubblicato.</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-20 h-20 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-cogs text-indigo-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Efficienza</h3>
+                    <p class="text-gray-600">Risparmia ore di lavoro ogni settimana. Automatizza il monitoraggio manuale dei portali e lascia che i tuoi agenti si concentrino sulla vendita.</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-20 h-20 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-search-dollar text-indigo-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Opportunità</h3>
+                    <p class="text-gray-600">Scova le vere occasioni (es. immobili con prezzo al mq inferiore alla media) prima che lo faccia il mercato, dandoti un vantaggio strategico.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sezione Prezzi -->
+    <section id="pricing" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4" data-aos="fade-up">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-800">Piani Semplici e Trasparenti</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Scegli il piano perfetto per dare alla tua agenzia un vantaggio decisivo sul mercato.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Piano Base -->
+                <div class="bg-white rounded-xl p-8 shadow-md card-hover transition-all border-2 border-transparent">
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">Scout Base</h3>
+                    <p class="text-gray-600 mb-6 h-16">Ideale per agenzie che vogliono automatizzare il monitoraggio e risparmiare ore preziose.</p>
+                    <div class="text-5xl font-bold mb-6">€79<span class="text-lg font-medium text-gray-500">/mese</span></div>
+                    <ul class="space-y-4 text-gray-600 mb-8">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i>Monitoraggio di <strong>1 provincia</strong> a scelta</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i>Scansione <strong>ogni 2 ore</strong> (orari d'ufficio)</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i>Riepilogo giornaliero via <strong>Email</strong></li>
+                        <li class="flex items-center text-gray-400"><i class="fas fa-times-circle mr-3"></i><del>Alert Istantanei su Telegram</del></li>
+                    </ul>
+                    <a href="https://buy.stripe.com/test_3cI14m7mH6sk5nA6hE8k800" class="w-full block text-center bg-indigo-100 text-indigo-700 font-bold py-3 px-4 rounded-md hover:bg-indigo-200 transition-all" target="_blank">
+                        Inizia la Prova Gratuita di 7 Giorni
+                    </a>
+                </div>
+                <!-- Piano Pro -->
+                <div class="bg-white rounded-xl p-8 shadow-md card-hover transition-all border-2 border-indigo-600 relative">
+                    <div class="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-indigo-600 text-white text-xs font-bold px-3 py-1 rounded-full">PIÙ SCELTO</div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">Scout Pro</h3>
+                    <p class="text-gray-600 mb-6 h-16">Perfetto per agenzie competitive che vogliono battere la concorrenza sul tempo.</p>
+                    <div class="text-5xl font-bold mb-6">€149<span class="text-lg font-medium text-gray-500">/mese</span></div>
+                    <ul class="space-y-4 text-gray-600 mb-8">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i>Monitoraggio fino a <strong>5 province</strong></li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i>Scansione <strong>ogni ora</strong> (orari d'ufficio)</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i><strong>Alert Istantanei su Telegram</strong></li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i>Riepilogo giornaliero via <strong>Email</strong></li>
+                    </ul>
+                    <a href="https://buy.stripe.com/test_eVqbJ0cH1aIA17keOa8k801" class="w-full block text-center gradient-bg text-white font-bold py-3 px-4 rounded-md hover:opacity-90 transition-all" target="_blank">
+                        Abbonati Ora e Inizia Subito
+                    </a>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <p class="text-gray-600">Hai bisogno di più? Contattaci per una <a href="mailto:adamchierici@gmail.com" class="text-indigo-600 font-semibold hover:underline">soluzione Custom/Enterprise</a>.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Semplificato -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-400 text-sm">© 2025 Scout Immobiliare - Un servizio di Adam Chierici.</p>
+        </div>
+    </footer>
+
+    <!-- AOS Animation Library JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+        });
+    </script>
+</body>
+</html>
