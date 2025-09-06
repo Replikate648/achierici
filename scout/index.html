@@ -182,7 +182,7 @@
                         <div class="flex items-center">
                             <input id="privacy-custom" name="privacy" type="checkbox" required class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded">
                             <label for="privacy-custom" class="ml-2 block text-sm text-gray-700">
-                                Acconsento al trattamento dei dati secondo la <a href="#" id="open-privacy-policy" class="text-indigo-600 hover:underline">Privacy Policy</a>
+                                Acconsento al trattamento dei dati secondo la <a href="privacy.html" class="text-indigo-600 hover:underline">Privacy Policy</a>
                             </label>
                         </div>
                         <div>
@@ -220,11 +220,15 @@
         </div>
     </div>
 
-    <!-- Footer Semplificato -->
+    <!-- Footer con Link Legali -->
     <footer class="bg-gray-800 text-white py-8">
         <div class="container mx-auto px-4 text-center">
             <p class="text-gray-400 text-sm">© 2025 Scout Immobiliare - Un servizio di Adam Chierici.</p>
-            <a href="#" id="open-privacy-policy-footer" class="text-sm text-gray-400 hover:text-white mt-2 inline-block">Privacy Policy</a>
+            <div class="mt-2 text-sm">
+                <a href="termini.html" class="text-gray-400 hover:text-white underline">Termini e Condizioni</a>
+                <span class="text-gray-500 mx-2">|</span>
+                <a href="privacy.html" class="text-gray-400 hover:text-white underline">Privacy Policy</a>
+            </div>
         </div>
     </footer>
 
@@ -264,12 +268,10 @@
             modal.querySelector('.modal-container').classList.add('scale-95');
         };
 
-        openLinks.forEach(link => {
-            if(link) {
-                link.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    openModal();
-                });
+        // Aggiorna il riferimento al link della privacy nel form
+        document.querySelectorAll('a[href="#"]').forEach(link => {
+            if (link.textContent === 'Privacy Policy') {
+                link.href = 'privacy.html';
             }
         });
 
