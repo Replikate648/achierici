@@ -113,60 +113,77 @@
     <!-- SEZIONE DEMO VISIVA - FINE -->
     <!-- ======================================================================================= -->
 
-    <!-- Sezione Prezzi -->
+    <!-- ======================================================================================= -->
+    <!-- SEZIONE PREZZI (Versione 3.0 con Toggle Mensile/Annuale) - INIZIO -->
+    <!-- ======================================================================================= -->
     <section id="pricing" class="py-20 bg-gray-50">
         <div class="container mx-auto px-4" data-aos="fade-up">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-800">Piani Semplici per un Vantaggio Concreto</h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">Scegli la soluzione su misura per la tua agenzia e inizia a battere la concorrenza sul tempo.</p>
             </div>
-            <!-- Contenitore per i piani Base e Pro -->
+            <!-- Toggle Mensile/Annuale -->
+            <div class="flex justify-center items-center mb-12">
+                <span class="font-semibold text-gray-700">Mensile</span>
+                <label for="billing-toggle" class="relative inline-flex items-center cursor-pointer mx-4">
+                    <input type="checkbox" id="billing-toggle" class="sr-only peer">
+                    <div class="w-14 h-8 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-1 after:left-1 after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-indigo-600"></div>
+                </label>
+                <span class="font-semibold text-gray-700">Annuale <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded-full">-20%</span></span>
+            </div>
+            <!-- Contenitore per i piani -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                 <!-- Piano Base -->
                 <div class="bg-white rounded-xl p-8 shadow-lg card-hover transition-all flex flex-col border-2 border-gray-200">
                     <h3 class="text-3xl font-bold mb-2 text-gray-800">Scout Base</h3>
                     <p class="text-gray-500 mb-6 flex-grow">Ideale per agenzie che vogliono automatizzare il monitoraggio e risparmiare ore preziose.</p>
-                    <div class="text-5xl font-bold mb-6">€79<span class="text-lg font-medium text-gray-500">/mese</span></div>
+
+                    <!-- Prezzi Dinamici -->
+                    <div class="price-monthly text-5xl font-bold mb-6">€79<span class="text-lg font-medium text-gray-500">/mese</span></div>
+                    <div class="price-yearly hidden text-5xl font-bold mb-6">€758<span class="text-lg font-medium text-gray-500">/anno</span></div>
+
                     <ul class="space-y-4 text-gray-700 mb-8">
                         <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i><span>Monitoraggio di <strong>1 provincia</strong> a scelta</span></li>
                         <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i><span>Scansione <strong>ogni 2 ore</strong> (orari d'ufficio)</span></li>
                         <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i><span>Riepilogo giornaliero via <strong>Email</strong></span></li>
                         <li class="flex items-start text-gray-400"><i class="fas fa-times-circle mr-3 mt-1"></i><span><del>Alert Istantanei su Telegram</del></span></li>
                     </ul>
-                    <a href="https://buy.stripe.com/4gMaEQ5uyc0o3PlgAba3u02" class="w-full block text-center bg-indigo-100 text-indigo-700 font-bold py-3 px-4 rounded-lg hover:bg-indigo-200 transition-all mt-auto" target="_blank">
-                        Inizia la Prova Gratuita di 7 Giorni
-                    </a>
+
+                    <!-- Link Dinamici -->
+                    <a href="https://buy.stripe.com/4gMaEQ5uyc0o3PlgAba3u02" class="price-monthly w-full block text-center bg-indigo-100 text-indigo-700 font-bold py-3 px-4 rounded-lg hover:bg-indigo-200 transition-all mt-auto" target="_blank">Inizia la Prova Gratuita di 7 Giorni</a>
+                    <a href="https://buy.stripe.com/28E00c0ae7K8etZbfRa3u04" class="price-yearly hidden w-full block text-center bg-indigo-100 text-indigo-700 font-bold py-3 px-4 rounded-lg hover:bg-indigo-200 transition-all mt-auto" target="_blank">Inizia la Prova Gratuita (Annuale)</a>
                 </div>
                 <!-- Piano Pro -->
                 <div class="bg-white rounded-xl p-8 shadow-lg card-hover transition-all flex flex-col border-2 border-indigo-600">
                     <h3 class="text-3xl font-bold mb-2 text-gray-800">Scout Pro</h3>
                     <p class="text-gray-500 mb-6 flex-grow">Perfetto per agenzie competitive che vogliono essere le prime a chiamare.</p>
-                    <div class="text-5xl font-bold mb-6">€149<span class="text-lg font-medium text-gray-500">/mese</span></div>
+
+                    <!-- Prezzi Dinamici -->
+                    <div class="price-monthly text-5xl font-bold mb-6">€149<span class="text-lg font-medium text-gray-500">/mese</span></div>
+                    <div class="price-yearly hidden text-5xl font-bold mb-6">€1430<span class="text-lg font-medium text-gray-500">/anno</span></div>
                     <ul class="space-y-4 text-gray-700 mb-8">
                         <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i><span>Monitoraggio fino a <strong>5 province</strong></span></li>
                         <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i><span>Scansione <strong>ogni ora</strong> (orari d'ufficio)</span></li>
                         <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i><span><strong>Alert Istantanei su Telegram</strong></span></li>
                         <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i><span>Riepilogo giornaliero via <strong>Email</strong></span></li>
                     </ul>
-                    <a href="https://buy.stripe.com/8x2cMY9KOggE1Hd5Vxa3u03" class="w-full block text-center gradient-bg text-white font-bold py-3 px-4 rounded-lg hover:opacity-90 transition-all mt-auto" target="_blank">
-                        Abbonati Ora e Inizia Subito
-                    </a>
+
+                    <!-- Link Dinamici -->
+                    <a href="https://buy.stripe.com/8x2cMY9KOggE1Hd5Vxa3u03" class="price-monthly w-full block text-center gradient-bg text-white font-bold py-3 px-4 rounded-lg hover:opacity-90 transition-all mt-auto" target="_blank">Abbonati Ora (Mensile)</a>
+                    <a href="https://buy.stripe.com/eVq00c4qufcAetZfw7a3u05" class="price-yearly hidden w-full block text-center gradient-bg text-white font-bold py-3 px-4 rounded-lg hover:opacity-90 transition-all mt-auto" target="_blank">Abbonati Ora (Annuale)</a>
                 </div>
             </div>
             <!-- Sezione Custom/Enterprise con Form -->
             <div class="max-w-5xl mx-auto mt-12 bg-white rounded-xl shadow-lg p-8" data-aos="fade-up">
                 <div class="text-center">
                     <h3 class="text-3xl font-bold mb-2 text-gray-800">Soluzione Custom / Enterprise</h3>
-                    <p class="text-gray-500 mb-6 max-w-2xl mx-auto">
-                        Hai bisogno di monitorare più portali, applicare filtri avanzati o integrare i dati nel tuo CRM? Parliamone.
-                        Sviluppo soluzioni su misura per le esigenze più complesse.
-                    </p>
+                    <p class="text-gray-500 mb-6 max-w-2xl mx-auto">Hai bisogno di monitorare più portali, applicare filtri avanzati o integrare i dati nel tuo CRM? Parliamone. Sviluppo soluzioni su misura per le esigenze più complesse.</p>
                     <button id="open-contact-form" class="bg-gray-800 text-white font-bold py-3 px-6 rounded-lg hover:bg-gray-900 transition-all">
                         Richiedi un Preventivo Personalizzato
                     </button>
                 </div>
                 <div id="contact-form-container" class="hidden mt-8 max-w-lg mx-auto">
-                    <form action="https://formspree.io/f/mgvznooo" method="POST" class="space-y-4">
+                     <form action="https://formspree.io/f/mgvznooo" method="POST" class="space-y-4">
                         <div>
                             <label for="name-custom" class="block text-sm font-medium text-gray-700 mb-1">Nome*</label>
                             <input type="text" id="name-custom" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500">
@@ -195,6 +212,9 @@
             </div>
         </div>
     </section>
+    <!-- ======================================================================================= -->
+    <!-- SEZIONE PREZZI - FINE -->
+    <!-- ======================================================================================= -->
 
     <!-- Privacy Policy Modal -->
     <div id="privacy-modal" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50 opacity-0 pointer-events-none">
@@ -252,10 +272,6 @@
 
         // Script per il modale privacy
         const modal = document.getElementById('privacy-modal');
-        const openLinks = [
-            document.getElementById('open-privacy-policy'),
-            document.getElementById('open-privacy-policy-footer')
-        ];
         const closeButton = document.getElementById('close-privacy-policy');
 
         const openModal = () => {
@@ -268,13 +284,6 @@
             modal.querySelector('.modal-container').classList.add('scale-95');
         };
 
-        // Aggiorna il riferimento al link della privacy nel form
-        document.querySelectorAll('a[href="#"]').forEach(link => {
-            if (link.textContent === 'Privacy Policy') {
-                link.href = 'privacy.html';
-            }
-        });
-
         if(closeButton) {
             closeButton.addEventListener('click', closeModal);
         }
@@ -284,6 +293,17 @@
                 closeModal();
             }
         });
+
+        // NUOVO SCRIPT PER IL TOGGLE DEI PREZZI
+        const billingToggle = document.getElementById('billing-toggle');
+        const monthlyElements = document.querySelectorAll('.price-monthly');
+        const yearlyElements = document.querySelectorAll('.price-yearly');
+        if (billingToggle) {
+            billingToggle.addEventListener('change', () => {
+                monthlyElements.forEach(el => el.classList.toggle('hidden'));
+                yearlyElements.forEach(el => el.classList.toggle('hidden'));
+            });
+        }
     </script>
 </body>
 </html>
