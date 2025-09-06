@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scout Immobiliare - Il Tuo Vantaggio Competitivo Automatizzato</title>
     <meta name="description" content="Monitora gli annunci immobiliari prima della concorrenza. Ricevi alert in tempo reale e scopri le migliori occasioni sul mercato prima di tutti.">
-    <!-- Nota: il percorso del favicon ora punta alla cartella principale -->
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -24,6 +23,12 @@
         }
         .transition-all {
             transition: all 0.3s ease;
+        }
+        .modal-overlay {
+            transition: opacity 0.3s ease;
+        }
+        .modal-container {
+            transition: transform 0.3s ease;
         }
     </style>
 </head>
@@ -152,28 +157,77 @@
             <div class="max-w-5xl mx-auto mt-12 bg-white rounded-xl shadow-lg p-8" data-aos="fade-up">
                 <div class="text-center">
                     <h3 class="text-3xl font-bold mb-2 text-gray-800">Soluzione Custom / Enterprise</h3>
-                    <p class="text-gray-500 mb-6 max-w-2xl mx-auto">Hai bisogno di monitorare più portali, applicare filtri avanzati o integrare i dati nel tuo CRM? Parliamone. Sviluppo soluzioni su misura per le esigenze più complesse.</p>
+                    <p class="text-gray-500 mb-6 max-w-2xl mx-auto">
+                        Hai bisogno di monitorare più portali, applicare filtri avanzati o integrare i dati nel tuo CRM? Parliamone.
+                        Sviluppo soluzioni su misura per le esigenze più complesse.
+                    </p>
                     <button id="open-contact-form" class="bg-gray-800 text-white font-bold py-3 px-6 rounded-lg hover:bg-gray-900 transition-all">
                         Richiedi un Preventivo Personalizzato
                     </button>
                 </div>
                 <div id="contact-form-container" class="hidden mt-8 max-w-lg mx-auto">
-                     <form action="https://formspree.io/f/mgvznooo" method="POST" class="space-y-4">
-                        <div><label for="name-custom" class="block text-sm font-medium text-gray-700 mb-1">Nome*</label><input type="text" id="name-custom" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500"></div>
-                        <div><label for="email-custom" class="block text-sm font-medium text-gray-700 mb-1">Email Aziendale*</label><input type="email" id="email-custom" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500"></div>
-                        <div><label for="message-custom" class="block text-sm font-medium text-gray-700 mb-1">Descrivi le tue esigenze*</label><textarea id="message-custom" name="message" rows="4" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500"></textarea></div>
-                        <div><button type="submit" class="w-full gradient-bg text-white font-bold py-3 px-4 rounded-md hover:opacity-90 transition-all">Invia Richiesta</button></div>
+                    <form action="https://formspree.io/f/mgvznooo" method="POST" class="space-y-4">
+                        <div>
+                            <label for="name-custom" class="block text-sm font-medium text-gray-700 mb-1">Nome*</label>
+                            <input type="text" id="name-custom" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500">
+                        </div>
+                        <div>
+                            <label for="email-custom" class="block text-sm font-medium text-gray-700 mb-1">Email Aziendale*</label>
+                            <input type="email" id="email-custom" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500">
+                        </div>
+                        <div>
+                            <label for="message-custom" class="block text-sm font-medium text-gray-700 mb-1">Descrivi le tue esigenze*</label>
+                            <textarea id="message-custom" name="message" rows="4" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500"></textarea>
+                        </div>
+                        <div class="flex items-center">
+                            <input id="privacy-custom" name="privacy" type="checkbox" required class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded">
+                            <label for="privacy-custom" class="ml-2 block text-sm text-gray-700">
+                                Acconsento al trattamento dei dati secondo la <a href="#" id="open-privacy-policy" class="text-indigo-600 hover:underline">Privacy Policy</a>
+                            </label>
+                        </div>
+                        <div>
+                            <button type="submit" class="w-full gradient-bg text-white font-bold py-3 px-4 rounded-md hover:opacity-90 transition-all">
+                                Invia Richiesta
+                            </button>
+                        </div>
                     </form>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Privacy Policy Modal -->
+    <div id="privacy-modal" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50 opacity-0 pointer-events-none">
+        <div class="modal-container bg-white w-full max-w-2xl rounded-lg shadow-xl max-h-full overflow-y-auto p-8 transform scale-95">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-2xl font-bold">Privacy Policy</h2>
+                <button id="close-privacy-policy" class="text-2xl text-gray-500 hover:text-gray-800">×</button>
+            </div>
+            <div class="text-sm text-gray-600 space-y-4">
+                <h3 class="font-bold text-lg mt-4">Titolare del Trattamento dei Dati</h3>
+                <p>Adam Chierici<br>Email: adamchierici@gmail.com</p>
+                <h3 class="font-bold text-lg mt-4">Tipi di Dati Raccolti</h3>
+                <p>Questo sito raccoglie, tramite il modulo di contatto, i seguenti dati personali forniti volontariamente dall'utente: Nome, Email, e il contenuto del messaggio.</p>
+                <h3 class="font-bold text-lg mt-4">Finalità del Trattamento</h3>
+                <p>I dati forniti vengono utilizzati esclusivamente per rispondere alla richiesta di contatto inviata dall'utente e per eventuali comunicazioni successive strettamente relative a tale richiesta.</p>
+                <h3 class="font-bold text-lg mt-4">Base Giuridica del Trattamento</h3>
+                <p>Il trattamento si basa sul consenso esplicito dell'utente, fornito tramite l'apposita casella di spunta ("Acconsento al trattamento...") prima dell'invio del modulo. Il conferimento dei dati è facoltativo, ma necessario per inviare la richiesta.</p>
+                <h3 class="font-bold text-lg mt-4">Periodo di Conservazione</h3>
+                <p>I dati saranno conservati per il tempo strettamente necessario a gestire la richiesta dell'utente e per adempiere agli obblighi di legge. Non verranno utilizzati per altri scopi né ceduti a terzi senza un esplicito consenso.</p>
+                <h3 class="font-bold text-lg mt-4">Diritti dell'Utente</h3>
+                <p>In base al Regolamento (UE) 2016/679, l'utente ha il diritto di accedere ai propri dati, chiederne la rettifica, la cancellazione (diritto all'oblio), la limitazione del trattamento, opporsi al trattamento e il diritto alla portabilità dei dati. Per esercitare tali diritti, è possibile scrivere all'indirizzo email del Titolare.</p>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer Semplificato -->
     <footer class="bg-gray-800 text-white py-8">
         <div class="container mx-auto px-4 text-center">
             <p class="text-gray-400 text-sm">© 2025 Scout Immobiliare - Un servizio di Adam Chierici.</p>
+            <a href="#" id="open-privacy-policy-footer" class="text-sm text-gray-400 hover:text-white mt-2 inline-block">Privacy Policy</a>
         </div>
     </footer>
+
     <!-- AOS Animation Library JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
@@ -181,6 +235,7 @@
             duration: 800,
             once: true,
         });
+
         // Script per il form a scomparsa
         const openFormButton = document.getElementById('open-contact-form');
         const formContainer = document.getElementById('contact-form-container');
@@ -190,6 +245,43 @@
                 openFormButton.classList.add('hidden');
             });
         }
+
+        // Script per il modale privacy
+        const modal = document.getElementById('privacy-modal');
+        const openLinks = [
+            document.getElementById('open-privacy-policy'),
+            document.getElementById('open-privacy-policy-footer')
+        ];
+        const closeButton = document.getElementById('close-privacy-policy');
+
+        const openModal = () => {
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            modal.querySelector('.modal-container').classList.remove('scale-95');
+        };
+
+        const closeModal = () => {
+            modal.classList.add('opacity-0', 'pointer-events-none');
+            modal.querySelector('.modal-container').classList.add('scale-95');
+        };
+
+        openLinks.forEach(link => {
+            if(link) {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    openModal();
+                });
+            }
+        });
+
+        if(closeButton) {
+            closeButton.addEventListener('click', closeModal);
+        }
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
     </script>
 </body>
 </html>
