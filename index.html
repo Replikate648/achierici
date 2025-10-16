@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adam Chierici - Digital Consultant & Developer</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta name="google-site-verification" content="GUhoNCRgTsy4XKgQsYqoRe11SinDsMcsD-rjuEH2084" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        .font-montserrat { font-family: 'Montserrat', sans-serif; }
+        .gradient-bg {
+            background: linear-gradient(135deg, #6B46C1 0%, #3182CE 100%);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+        .modal-overlay {
+            transition: opacity 0.3s ease;
+        }
+        .modal-container {
+            transition: transform 0.3s ease;
+        }
+    </style>
+    <!-- Script di reindirizzamento automatico -->
+    <script>
+        (function() {
+            const hasBeenRedirected = sessionStorage.getItem('redirected');
+            if (hasBeenRedirected) return;
+            const userLang = navigator.language || navigator.userLanguage;
+            const primaryLang = userLang.slice(0, 2);
+            if (primaryLang !== 'it') {
+                sessionStorage.setItem('redirected', 'true');
+                window.location.replace('en.html');
+            }
+        })();
+    </script>
+</head>
+<body class="font-montserrat antialiased text-gray-800 bg-gray-50">
+    <!-- Header/Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold">
+                <span class="text-gray-800">Adam</span>
+                <span class="text-amber-600">Chierici</span>
+            </a>
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="#home" class="text-indigo-700 font-medium">Home</a>
+                <a href="#services" class="hover:text-indigo-700 transition-all">Servizi</a>
+                <a href="#about" class="hover:text-indigo-700 transition-all">Chi Sono</a>
+                <a href="#method" class="hover:text-indigo-700 transition-all">Come Lavoro</a>
+                <a href="#projects" class="hover:text-indigo-700 transition-all">Progetti</a>
+                <a href="#demo" class="hover:text-indigo-700 transition-all">Demo</a>
+                <a href="#contact" class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition-all">Contatti</a>
+                <div class="border-l pl-4 ml-4 text-sm">
+                    <span class="font-bold text-gray-800">IT</span>
+                    <a href="en.html" class="text-gray-500 hover:text-indigo-700">EN</a>
+                </div>
+            </nav>
+            <button class="md:hidden text-gray-600">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </header>
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg text-white py-20">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Trasforma la tua azienda con soluzioni AI su misura</h1>
+                <p class="text-xl mb-8 opacity-90">Consulenza e sviluppo di applicazioni intelligenti, automazioni e soluzioni web con un approccio concreto, etico e privacy-by-design.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#contact" class="bg-white text-indigo-700 font-bold px-6 py-3 rounded-md text-center hover:bg-gray-100 transition-all">Richiedi una consulenza</a>
+                    <a href="#services" class="border-2 border-white text-white font-bold px-6 py-3 rounded-md text-center hover:bg-white hover:bg-opacity-10 transition-all">Scopri i servizi</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center" data-aos="fade-left">
+                <img src="pexels-googledeepmind-17485633.jpg" alt="Abstract AI Technology" class="rounded-lg shadow-xl w-full max-w-lg">
+            </div>
+        </div>
+    </section>
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto px-4" data-aos="fade-up">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-800">Servizi Professionali</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Soluzioni tecnologiche su misura per PMI e professionisti, sviluppate con un approccio concreto e orientato ai risultati.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+                <div class="bg-gray-50 rounded-xl p-8 shadow-md card-hover transition-all" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-6"><i class="fas fa-mobile-alt text-indigo-600 text-2xl"></i></div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">Sviluppo App Mobile</h3>
+                    <p class="text-gray-600">Creazione di applicazioni cross-platform (Android) e soluzioni web personalizzate, con focus su usabilità e performance.</p>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-8 shadow-md card-hover transition-all" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6"><i class="fas fa-robot text-blue-600 text-2xl"></i></div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">Automazioni Aziendali</h3>
+                    <p class="text-gray-600">Riduci i processi manuali ripetitivi con flussi di lavoro automatizzati che integrano i tuoi strumenti esistenti (es. Power Apps).</p>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-8 shadow-md card-hover transition-all" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6"><i class="fas fa-shopping-cart text-purple-600 text-2xl"></i></div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">Creazione E-commerce e Siti Web</h3>
+                    <p class="text-gray-600">Sviluppo di piattaforme e-commerce (CMS e non) e siti web moderni, performanti e scalabili.</p>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-8 shadow-md card-hover transition-all" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6"><i class="fas fa-brain text-green-600 text-2xl"></i></div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">Consulenza AI & Machine Learning</h3>
+                    <p class="text-gray-600">Implementazione di soluzioni AI etiche e misurabili, come Chatbot intelligenti per il customer service (API OpenAI/Gemini).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4" data-aos="fade-up">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-10 md:mb-0 flex justify-center">
+                    <img src="ac_UPSCALED.png" alt="Adam Chierici Logo" class="rounded-lg w-64 h-64 object-contain shadow-lg bg-white p-2">
+                </div>
+                <div class="md:w-2/3 md:pl-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-800">Chi Sono</h2>
+                    <p class="text-lg text-gray-600 mb-6">Ciao, sono Adam Chierici, consulente e sviluppatore con un background multidisciplinare che spazia dal marketing all'intelligenza artificiale.</p>
+                    <p class="text-lg text-gray-600 mb-6">Nel mio lavoro unisco innovazione tecnologica a un approccio umano e orientato ai risultati.</p>
+                    <p class="text-lg text-gray-600">Credo nella tecnologia che rispetta la privacy e per questo ogni mia soluzione è etica, trasparente e misurabile.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Work Method Section -->
+    <section id="method" class="py-20 bg-white">
+        <div class="container mx-auto px-4" data-aos="fade-up">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-800">Come Lavoro</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Un metodo strutturato e flessibile, che mette al centro le tue esigenze e garantisce risultati concreti.</p>
+            </div>
+            <div class="max-w-4xl mx-auto">
+                <div class="relative">
+                    <div class="border-l-2 border-indigo-200 absolute h-full left-4 md:left-1/2 -ml-1"></div>
+                    <div class="mb-8 flex justify-between items-center w-full"><div class="order-1 w-5/12"></div><div class="z-20 flex items-center order-1 bg-indigo-600 shadow-xl w-8 h-8 rounded-full"><h1 class="mx-auto font-semibold text-lg text-white">1</h1></div><div class="order-1 bg-gray-50 rounded-lg shadow-xl w-5/12 px-6 py-4" data-aos="fade-left"><h3 class="mb-2 font-bold text-lg text-gray-800">Consulenza Iniziale</h3><p class="text-sm text-gray-600">Analisi gratuita delle tue esigenze.</p></div></div>
+                    <div class="mb-8 flex justify-between flex-row-reverse items-center w-full"><div class="order-1 w-5/12"></div><div class="z-20 flex items-center order-1 bg-indigo-600 shadow-xl w-8 h-8 rounded-full"><h1 class="mx-auto font-semibold text-lg text-white">2</h1></div><div class="order-1 bg-gray-50 rounded-lg shadow-xl w-5/12 px-6 py-4" data-aos="fade-right"><h3 class="mb-2 font-bold text-lg text-gray-800">Analisi e Proposta</h3><p class="text-sm text-gray-600">Definizione requisiti e roadmap.</p></div></div>
+                    <div class="mb-8 flex justify-between items-center w-full"><div class="order-1 w-5/12"></div><div class="z-20 flex items-center order-1 bg-indigo-600 shadow-xl w-8 h-8 rounded-full"><h1 class="mx-auto font-semibold text-lg text-white">3</h1></div><div class="order-1 bg-gray-50 rounded-lg shadow-xl w-5/12 px-6 py-4" data-aos="fade-left"><h3 class="mb-2 font-bold text-lg text-gray-800">Sviluppo Agile</h3><p class="text-sm text-gray-600">Feedback continui e trasparenza.</p></div></div>
+                    <div class="mb-8 flex justify-between flex-row-reverse items-center w-full"><div class="order-1 w-5/12"></div><div class="z-20 flex items-center order-1 bg-indigo-600 shadow-xl w-8 h-8 rounded-full"><h1 class="mx-auto font-semibold text-lg text-white">4</h1></div><div class="order-1 bg-gray-50 rounded-lg shadow-xl w-5/12 px-6 py-4" data-aos="fade-right"><h3 class="mb-2 font-bold text-lg text-gray-800">Test & Lancio</h3><p class="text-sm text-gray-600">Validazione e deployment assistito.</p></div></div>
+                    <div class="mb-8 flex justify-between items-center w-full"><div class="order-1 w-5/12"></div><div class="z-20 flex items-center order-1 bg-indigo-600 shadow-xl w-8 h-8 rounded-full"><h1 class="mx-auto font-semibold text-lg text-white">5</h1></div><div class="order-1 bg-gray-50 rounded-lg shadow-xl w-5/12 px-6 py-4" data-aos="fade-left"><h3 class="mb-2 font-bold text-lg text-gray-800">Supporto e Ottimizzazione</h3><p class="text-sm text-gray-600">Monitoraggio e formazione.</p></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4" data-aos="fade-up">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-800">Progetti Realizzati</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Soluzioni concrete che dimostrano un approccio innovativo e un impatto misurabile.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Progetto Automazione -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg p-8" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-robot text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800">Automazione Reportistica</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Sviluppo di un sistema in Microsoft 365 per automatizzare la generazione di report aziendali, riducendo il lavoro manuale.</p>
+                    <div class="mt-4 flex space-x-2">
+                        <img src="report_quindicinale.png" alt="Anteprima Report Quindicinale" class="w-1/2 rounded border cursor-pointer hover:opacity-75 project-image" data-src="report_quindicinale.png">
+                        <img src="analisi_email.png" alt="Anteprima Analisi Email" class="w-1/2 rounded border cursor-pointer hover:opacity-75 project-image" data-src="analisi_email.png">
+                    </div>
+                </div>
+                <!-- Progetto Luminatens -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg p-8" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-purple-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-lightbulb text-purple-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800">Luminatens - App & Web</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Sviluppo completo di un'app cross-platform per la scansione delle etichette nutrizionali, con relativo sito web.</p>
+                    <div class="mt-4">
+                        <img src="luminatens_preview.png" alt="Anteprima app Luminatens" class="w-full rounded border cursor-pointer hover:opacity-75 project-image" data-src="luminatens_preview.png">
+                    </div>
+                </div>
+                <!-- Progetto E-commerce -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg p-8" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-green-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-store text-green-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800">E-commerce</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">E-commerce di intimo e abbigliamento sviluppato da zero. Include blog e integrazione API GLS per la logistica.</p>
+                    <div class="mt-4">
+                        <img src="ilbarattolo_preview.png" alt="Anteprima e-commerce Il Barattolo" class="w-full rounded border cursor-pointer hover:opacity-75 project-image" data-src="ilbarattolo_preview.png">
+                    </div>
+                </div>
+                <!-- Progetto Landing Page -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg p-8" data-aos="fade-up" data-aos-delay="400">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-pink-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-bullseye text-pink-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800">Landing Page Strategica</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Realizzazione di una landing page per un servizio di "AI Strategy Assessment" per l'acquisizione di lead qualificati (PMI).</p>
+                    <div class="mt-4">
+                        <img src="landing_page.png" alt="Anteprima Landing Page" class="w-full rounded border cursor-pointer hover:opacity-75 project-image" data-src="landing_page.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Video Demo Section 1: RAG -->
+    <section id="demo" class="py-20 bg-white">
+        <div class="container mx-auto px-4" data-aos="fade-up">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-800">Demo: Sistema RAG in Azione</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Guarda una demo che mostra il funzionamento di un Chatbot AI per l'analisi e interpretazione di un dataset.</p>
+            </div>
+            <div class="max-w-4xl mx-auto">
+                <div class="relative shadow-xl rounded-lg overflow-hidden" style="padding-top: 56.25%;">
+                    <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/TU_2ULqi_o0?si=QDavMcTe3hEXeb9i" title="Video demo del progetto RAG" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Video Demo Section 2: N8N -->
+    <section id="demo-n8n" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4" data-aos="fade-up">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-800">Demo: Agente N8N per la Market Intelligence</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Un workflow di automazione che monitora i blog dei competitor, estrae nuovi articoli e li archivia per l'analisi strategica dei contenuti.</p>
+            </div>
+            <div class="max-w-6xl mx-auto md:flex md:items-start md:space-x-12">
+                <!-- Colonna Sinistra: Video -->
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <div class="relative shadow-xl rounded-lg overflow-hidden" style="padding-top: 56.25%;">
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/93uy4FTU57s?si=AlNiBUU37usiyDHM" title="Video demo del progetto N8N" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <!-- Colonna Destra: Vantaggi -->
+                <div class="md:w-1/2 text-gray-600">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Vantaggi Strategici</h3>
+                    <ul class="space-y-4">
+                        <li class="flex">
+                            <i class="fas fa-bolt text-indigo-500 mt-1 mr-3 flex-shrink-0"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Tempestività e Reattività</h4>
+                                <p class="text-sm">Ottieni un vantaggio competitivo sapendo immediatamente cosa pubblicano i competitor, permettendoti di reagire con contro-analisi o campagne mirate in poche ore, non giorni.</p>
+                            </div>
+                        </li>
+                        <li class="flex">
+                            <i class="fas fa-chart-pie text-indigo-500 mt-1 mr-3 flex-shrink-0"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Analisi Strategica dei Contenuti (SEO)</h4>
+                                <p class="text-sm">Crea un archivio intelligente per analizzare i topic cluster dei competitor, identificare "content gap" e scoprire le parole chiave che usano per dominare la ricerca.</p>
+                            </div>
+                        </li>
+                        <li class="flex">
+                            <i class="fas fa-cogs text-indigo-500 mt-1 mr-3 flex-shrink-0"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Efficienza Operativa</h4>
+                                <p class="text-sm">Automatizza un compito manuale che richiederebbe ore di lavoro umano ogni mese. Libera risorse preziose per dedicarle alla creatività e alla strategia, invece che al data entry.</p>
+                            </div>
+                        </li>
+                        <li class="flex">
+                            <i class="fas fa-archive text-indigo-500 mt-1 mr-3 flex-shrink-0"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Archivio Storico Intelligente</h4>
+                                <p class="text-sm">Costruisci un database storico per analizzare i pattern a lungo termine: frequenza di pubblicazione, stagionalità degli argomenti e strategie di contenuto abbandonate.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-4" data-aos="fade-up">
+            <div class="max-w-4xl mx-auto bg-gray-50 rounded-xl shadow-md overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 p-8 md:p-12">
+                        <h2 class="text-3xl font-bold mb-6 text-gray-800">Parliamo del tuo progetto</h2>
+                        <p class="text-gray-600 mb-8">Offro una consulenza iniziale gratuita. Compila il form per essere ricontattato.</p>
+                    </div>
+                    <div class="md:w-1/2 p-8 md:p-12 bg-white">
+                        <form action="https://formspree.io/f/mgvznooo" method="POST" class="space-y-6">
+                            <div><label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nome*</label><input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500"></div>
+                            <div><label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email*</label><input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500"></div>
+                            <div><label for="message" class="block text-sm font-medium text-gray-700 mb-1">Messaggio*</label><textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500"></textarea></div>
+                            <div class="flex items-center"><input id="privacy" name="privacy" type="checkbox" required class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"><label for="privacy" class="ml-2 block text-sm text-gray-700">Acconsento al trattamento dei dati secondo la <a href="#" id="open-privacy-policy" class="text-indigo-600 hover:underline">Privacy Policy</a></label></div>
+                            <div><button type="submit" class="w-full gradient-bg text-white font-bold py-3 px-4 rounded-md hover:opacity-90 transition-all">Invia richiesta</button></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-400 text-sm">© 2025 Adam Chierici. Tutti i diritti riservati.</p>
+            <a href="#" id="open-privacy-policy-footer" class="text-sm text-gray-400 hover:text-white mt-2 inline-block">Privacy Policy</a>
+        </div>
+    </footer>
+    <!-- Privacy Policy Modal -->
+    <div id="privacy-modal" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50 opacity-0 pointer-events-none">
+        <div class="modal-container bg-white w-full max-w-2xl rounded-lg shadow-xl max-h-full overflow-y-auto p-8 transform scale-95">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-2xl font-bold">Privacy Policy</h2>
+                <button id="close-privacy-policy" class="text-2xl text-gray-500 hover:text-gray-800">×</button>
+            </div>
+            <div class="text-sm text-gray-600 space-y-4">
+                <h3 class="font-bold text-lg mt-4">Titolare del Trattamento dei Dati</h3>
+                <p>Adam Chierici<br>Email: adamchierici@gmail.com</p>
+                <h3 class="font-bold text-lg mt-4">Tipi di Dati Raccolti</h3>
+                <p>Questo sito raccoglie, tramite il modulo di contatto, i seguenti dati personali forniti volontariamente dall'utente: Nome, Email, e il contenuto del messaggio.</p>
+                <h3 class="font-bold text-lg mt-4">Finalità del Trattamento</h3>
+                <p>I dati forniti vengono utilizzati esclusivamente per rispondere alla richiesta di contatto inviata dall'utente e per eventuali comunicazioni successive strettamente relative a tale richiesta.</p>
+                <h3 class="font-bold text-lg mt-4">Base Giuridica del Trattamento</h3>
+                <p>Il trattamento si basa sul consenso esplicito dell'utente, fornito tramite l'apposita casella di spunta ("Acconsento al trattamento...") prima dell'invio del modulo. Il conferimento dei dati è facoltativo, ma necessario per inviare la richiesta.</p>
+                <h3 class="font-bold text-lg mt-4">Periodo di Conservazione</h3>
+                <p>I dati saranno conservati per il tempo strettamente necessario a gestire la richiesta dell'utente e per adempiere agli obblighi di legge. Non verranno utilizzati per altri scopi né ceduti a terzi senza un esplicito consenso.</p>
+                <h3 class="font-bold text-lg mt-4">Diritti dell'Utente</h3>
+                <p>In base al Regolamento (UE) 2016/679, l'utente ha il diritto di accedere ai propri dati, chiederne la rettifica, la cancellazione (diritto all'oblio), la limitazione del trattamento, opporsi al trattamento e il diritto alla portabilità dei dati. Per esercitare tali diritti, è possibile scrivere all'indirizzo email del Titolare.</p>
+            </div>
+        </div>
+    </div>
+    <!-- Image Modal -->
+    <div id="image-modal" class="modal-overlay fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 z-50 hidden">
+        <div class="modal-container relative max-w-4xl max-h-full">
+            <img id="modal-img" src="" alt="Vista ingrandita del progetto" class="block max-w-full max-h-[90vh]">
+            <button id="modal-close" class="absolute -top-2 -right-2 m-4 text-white text-4xl font-bold">&times;</button>
+        </div>
+    </div>
+    <!-- AOS Animation Library JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+        });
+
+        // Script per il modale privacy
+        const modal = document.getElementById('privacy-modal');
+        const openLinks = [
+            document.getElementById('open-privacy-policy'),
+            document.getElementById('open-privacy-policy-footer')
+        ];
+        const closeButton = document.getElementById('close-privacy-policy');
+
+        const openModal = () => {
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            modal.querySelector('.modal-container').classList.remove('scale-95');
+        };
+
+        const closeModal = () => {
+            modal.classList.add('opacity-0', 'pointer-events-none');
+            modal.querySelector('.modal-container').classList.add('scale-95');
+        };
+
+        openLinks.forEach(link => {
+            if(link) {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    openModal();
+                });
+            }
+        });
+
+        if(closeButton) {
+            closeButton.addEventListener('click', closeModal);
+        }
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Script per il modale delle immagini
+        const imageModal = document.getElementById('image-modal');
+        const modalImg = document.getElementById('modal-img');
+        const modalClose = document.getElementById('modal-close');
+        const projectImages = document.querySelectorAll('.project-image');
+
+        const openImageModal = (src) => {
+            modalImg.src = src;
+            imageModal.classList.remove('hidden');
+        };
+
+        const closeImageModal = () => {
+            imageModal.classList.add('hidden');
+        };
+
+        projectImages.forEach(img => {
+            img.addEventListener('click', () => {
+                openImageModal(img.dataset.src);
+            });
+        });
+
+        if (modalClose) {
+            modalClose.addEventListener('click', closeImageModal);
+        }
+
+        imageModal.addEventListener('click', (e) => {
+            if (e.target === imageModal) {
+                closeImageModal();
+            }
+        });
+    </script>
+</body>
+</html>
+
+
