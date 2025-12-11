@@ -36,21 +36,6 @@
             transition: transform 0.3s ease;
         }
     </style>
-    <!-- Ensure non-English browsers land on the Italian page -->
-    <script>
-        (function(){
-            try {
-                var langs = navigator.languages || [navigator.language || navigator.userLanguage || ''];
-                var first = (langs[0] || '').toLowerCase();
-                if (first.indexOf('en') !== 0) {
-                    // if the user's preferred language is not English, go to Italian page
-                    location.replace('index.html');
-                }
-            } catch(e) {
-                // fail silently
-            }
-        })();
-    </script>
 </head>
 <body class="font-montserrat antialiased text-gray-800 bg-gray-50">
     <!-- Header/Navigation -->

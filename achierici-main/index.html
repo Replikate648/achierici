@@ -36,20 +36,19 @@
             transition: transform 0.3s ease;
         }
     </style>
-    <!-- Script di reindirizzamento rimosso per rendere l'italiano la lingua predefinita -->
-    <!-- Language-based redirect: only send English browsers to en.html -->
+    <!-- Script di reindirizzamento intelligente basato sulla lingua del browser -->
     <script>
-        (function(){
-            try {
-                var langs = navigator.languages || [navigator.language || navigator.userLanguage || ''];
-                var first = (langs[0] || '').toLowerCase();
-                if (first.indexOf('en') === 0) {
-                    // only redirect if the user's preferred language is English
-                    // use replace() to avoid polluting history
-                    location.replace('en.html');
-                }
-            } catch(e) {
-                // fail silently
+        // Rileva la lingua del browser e reindirizza se necessario
+        (function() {
+            // Se l'utente ha già un parametro di lingua nell'URL, non fare nulla
+            if (window.location.search.includes('lang=')) return;
+            
+            // Ottieni la lingua del browser
+            const browserLang = navigator.language || navigator.userLanguage;
+            
+            // Se la lingua principale è l'inglese, reindirizza a en.html
+            if (browserLang.toLowerCase().startsWith('en')) {
+                window.location.href = window.location.pathname.replace(/\/$/, '') + '/en.html';
             }
         })();
     </script>
