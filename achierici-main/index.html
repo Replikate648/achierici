@@ -36,23 +36,6 @@
             transition: transform 0.3s ease;
         }
     </style>
-    <!-- Script di reindirizzamento rimosso per rendere l'italiano la lingua predefinita -->
-    <!-- Language-based redirect: only send English browsers to en.html -->
-    <script>
-        (function(){
-            try {
-                var langs = navigator.languages || [navigator.language || navigator.userLanguage || ''];
-                var first = (langs[0] || '').toLowerCase();
-                if (first.indexOf('en') === 0) {
-                    // only redirect if the user's preferred language is English
-                    // use replace() to avoid polluting history
-                    location.replace('en.html');
-                }
-            } catch(e) {
-                // fail silently
-            }
-        })();
-    </script>
 </head>
 <body class="font-montserrat antialiased text-gray-800 bg-gray-50">
     <!-- Header/Navigation -->
